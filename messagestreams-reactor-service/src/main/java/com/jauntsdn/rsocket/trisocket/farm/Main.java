@@ -1,6 +1,10 @@
 package com.jauntsdn.rsocket.trisocket.farm;
 
-import com.jauntsdn.rsocket.*;
+import com.jauntsdn.rsocket.Disposable;
+import com.jauntsdn.rsocket.Headers;
+import com.jauntsdn.rsocket.MessageStreams;
+import com.jauntsdn.rsocket.ServerStreamsAcceptor;
+import com.jauntsdn.rsocket.SetupMessage;
 import com.jauntsdn.rsocket.trisocket.RSocketFactory;
 import com.jauntsdn.rsocket.trisocket.RSocketFactory.Server;
 import java.nio.charset.StandardCharsets;
@@ -12,7 +16,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import trisocket.*;
+import trisocket.Farmer;
+import trisocket.FarmerServer;
+import trisocket.Meat;
+import trisocket.Order;
+import trisocket.Veggie;
 
 public class Main {
   private static final Logger logger = LoggerFactory.getLogger(Main.class);
